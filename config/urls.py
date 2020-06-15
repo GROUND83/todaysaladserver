@@ -10,7 +10,7 @@ def trigger_error(request):
 
 
 urlpatterns = [
-    path((os.environ.get("DJANGO_ADMIN"), "admin/"), admin.site.urls),
+    path("todayadmin/", admin.site.urls),
     path("api/v1/users/", include("users.urls")),
     path("api/v1/calender/", include("calenders.urls")),
     path("api/v1/salad/", include("salads.urls")),
