@@ -4,12 +4,13 @@ from django.conf import settings
 from django.conf.urls.static import static
 import os
 
+
 def trigger_error(request):
     division_by_zero = 1 / 0
 
 
 urlpatterns = [
-    path(os.environ.get("DJANGO_ADMIN". "admin/"), admin.site.urls),
+    path((os.environ.get("DJANGO_ADMIN"), "admin/"), admin.site.urls),
     path("api/v1/users/", include("users.urls")),
     path("api/v1/calender/", include("calenders.urls")),
     path("api/v1/salad/", include("salads.urls")),
