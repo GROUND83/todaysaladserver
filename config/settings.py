@@ -147,10 +147,10 @@ else:
     DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.postgresql",
-            "HOST": os.environ.get("RDS_HOST"),
-            "NAME": os.environ.get("RDS_HOST_NAME"),
-            "USER": os.environ.get("RDS_HOST_USER"),
-            "PASSWORD": os.environ.get("RDS_HOST_PASSWORD"),
-            "PORT": "5432",
+            "HOST": os.environ("RDS_HOST"),
+            "NAME": os.environ("RDS_HOST_NAME"),
+            "USER": os.environ("RDS_HOST_USER"),
+            "PASSWORD": os.environ("RDS_HOST_PASSWORD"),
+            "PORT": os.environ("RDS_PORT"),
         }
     }
