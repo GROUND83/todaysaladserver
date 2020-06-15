@@ -11,13 +11,6 @@ class User(AbstractUser):
 
         verbose_name_plural = "고객"
 
-    # destination = models.ManyToManyField(
-    #     "destinations.Destination",
-    #     related_name="desitni",
-    #     max_length=30,
-    #     verbose_name="도착지",
-    #     null=False,
-    # )
     email = models.CharField(max_length=40, null=False, unique=True, verbose_name="이메일")
     phone = models.CharField(
         max_length=11, null=True, unique=True, blank=True, verbose_name="전화번호"

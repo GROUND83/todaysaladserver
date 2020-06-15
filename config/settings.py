@@ -23,6 +23,7 @@ ALLOWED_HOSTS = [
     "52.78.48.223",
     "localhost",
     "192.168.0.146",
+    "127.0.0.1",
 ]
 CORS_ORIGIN_WHITELIST = ["http://192.168.0.146:3000", "http://127.0.0.1:3000"]
 
@@ -106,7 +107,6 @@ AUTH_PASSWORD_VALIDATORS = [
 AUTHENTICATION_BACKENDS = [
     "users.my_auth.UserBackend",
     "django.contrib.auth.backends.ModelBackend",
-    # "allauth.account.auth_backends.AuthenticationBackend",
 ]
 
 # Internationalization
