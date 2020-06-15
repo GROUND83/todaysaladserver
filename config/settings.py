@@ -14,7 +14,7 @@ SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "todaysaladserver.eba-tpxtuxsy.ap-northeast-2.elasticbeanstalk.com",
+    ".elasticbeanstalk.com",
     "52.78.100.19",
     "52.78.48.223",
 ]
