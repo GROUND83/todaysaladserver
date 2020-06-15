@@ -24,8 +24,9 @@ ALLOWED_HOSTS = [
     "localhost",
     "192.168.0.146",
     "127.0.0.1",
+    ".todaysalad.com",
 ]
-CORS_ORIGIN_WHITELIST = ["http://192.168.0.146:3000", "http://127.0.0.1:3000"]
+CORS_ORIGIN_WHITELIST = ["http://192.168.0.146:3000", "https://www.todaysalad.com"]
 
 # Application definition
 DJANGO_APPS = [
