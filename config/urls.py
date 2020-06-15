@@ -2,7 +2,6 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-import os
 
 
 def trigger_error(request):
@@ -10,7 +9,7 @@ def trigger_error(request):
 
 
 urlpatterns = [
-    path("todayadmin/", admin.site.urls),
+    path("admin/", admin.site.urls),
     path("api/v1/users/", include("users.urls")),
     path("api/v1/calender/", include("calenders.urls")),
     path("api/v1/salad/", include("salads.urls")),
