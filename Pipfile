@@ -5,7 +5,6 @@ verify_ssl = true
 
 [dev-packages]
 
-
 [packages]
 django = "==2.2.5"
 djangorestframework = "*"
@@ -17,6 +16,8 @@ requests = "*"
 iamport-rest-client = "*"
 pillow = "*"
 django-dotenv = "*"
+psycopg2 = "*"
+psycopg2-binary = "*"
 
 [requires]
 python_version = "3.7"
