@@ -8,7 +8,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
+SECRET_KEY = "qoyzahsqkkt2o#)4^m6h5d7!o%x)b_#yu6=_#r-)9__)mcd(9^"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -126,6 +126,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "uploads")
 
 MEDIA_URL = "/media/"
 
+
 REST_FRAMEWORK = {
     "DEFAULT_FILTER_BACKENDS": ["django_filters.rest_framework.DjangoFilterBackend"],
     "DEFAULT_AUTHENTICATION_CLASSES": [
@@ -136,7 +137,7 @@ REST_FRAMEWORK = {
 
 DEFAULTPASSWORD = os.environ.get("DJANGO_SECRET_KEY")
 
-if DEBUG is False:
+if DEBUG:
     REST_FRAMEWORK["DEFAULT_RENDERER_CLASSES"] = [
         "rest_framework.renderers.JSONRenderer",
     ]
