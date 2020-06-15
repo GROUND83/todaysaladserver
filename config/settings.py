@@ -133,10 +133,10 @@ REST_FRAMEWORK = {
 
 DEFAULTPASSWORD = os.environ.get("DJANGO_SECRET_KEY")
 
+REST_FRAMEWORK["DEFAULT_RENDERER_CLASSES"] = [
+    "rest_framework.renderers.JSONRenderer",
+]
 if DEBUG is False:
-    REST_FRAMEWORK["DEFAULT_RENDERER_CLASSES"] = [
-        "rest_framework.renderers.JSONRenderer",
-    ]
     DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.sqlite3",
@@ -148,9 +148,9 @@ else:
         "default": {
             "ENGINE": "django.db.backends.postgresql",
             "HOST": os.environ.get("RDS_HOST"),
-            "NAME": os.environ.get("RDS_HOST_NAME"),
-            "USER": os.environ.get("RDS_HOST_USER"),
-            "PASSWORD": os.environ.get("RDS_HOST_PASSWORD"),
+            "NAME": os.environ.get("RDS_NAME"),
+            "USER": os.environ.get("RDS_USER"),
+            "PASSWORD": os.environ.get("RDS_PASSWORD"),
             "PORT": os.environ.get("RDS_PORT"),
         }
     }
