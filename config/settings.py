@@ -26,7 +26,7 @@ ALLOWED_HOSTS = [
     "127.0.0.1",
     ".todaysalad.com",
 ]
-CORS_ORIGIN_WHITELIST = ["192.168.0.146:3000", "www.todaysalad.com"]
+CORS_ORIGIN_WHITELIST = ["http://192.168.0.146:3000", "https://www.todaysalad.com"]
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
 
