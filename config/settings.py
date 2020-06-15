@@ -24,7 +24,7 @@ ALLOWED_HOSTS = [
     "localhost",
     "192.168.0.146",
 ]
-
+CORS_ORIGIN_WHITELIST = ["http://192.168.0.146:3000", "http://127.0.0.1:3000"]
 
 # Application definition
 DJANGO_APPS = [
@@ -56,9 +56,11 @@ THIRDPARTY_APPS = [
     "import_export",
     "iamport",
     "storages",
+    "corsheaders",
 ]
 INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS + THIRDPARTY_APPS
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
