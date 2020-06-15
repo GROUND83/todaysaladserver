@@ -9,6 +9,15 @@ awsebcli = "*"
 [packages]
 django = "==2.2.5"
 pipenv-to-requirements = "*"
+django-dotenv = "*"
+pillow = "*"
+djangorestframework = "*"
+markdown = "*"
+django-filter = "*"
+django-import-export = "*"
+pyjwt = "*"
+requests = "*"
+iamport-rest-client = "*"
 
 [requires]
 python_version = "3.7"

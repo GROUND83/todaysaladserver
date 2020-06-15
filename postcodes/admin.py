@@ -1,3 +1,8 @@
 from django.contrib import admin
+from . import models
+from import_export.admin import ExportActionModelAdmin, ImportExportMixin, ImportMixin
 
-# Register your models here.
+
+@admin.register(models.Postcode)
+class PostcodeAdmin(ImportExportMixin, admin.ModelAdmin):
+    pass
