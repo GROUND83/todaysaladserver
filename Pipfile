@@ -16,7 +16,6 @@ requests = "*"
 iamport-rest-client = "*"
 pillow = "*"
 django-dotenv = "*"
-psycopg2 = "*"
 psycopg2-binary = "*"
 
 [requires]
