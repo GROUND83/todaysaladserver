@@ -11,7 +11,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(os.environ.get("DEBUG"))
+DEBUG = True
 
 ALLOWED_HOSTS = [
     "todaysaladserver.eba-tpxtuxsy.ap-northeast-2.elasticbeanstalk.com",
@@ -136,7 +136,7 @@ REST_FRAMEWORK = {
 
 DEFAULTPASSWORD = os.environ.get("DJANGO_SECRET_KEY")
 
-if not DEBUG:
+if DEBUG is False:
     REST_FRAMEWORK["DEFAULT_RENDERER_CLASSES"] = [
         "rest_framework.renderers.JSONRenderer",
     ]
