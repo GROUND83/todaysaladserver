@@ -44,14 +44,10 @@ class UsersViewSet(ModelViewSet):
         print(self.action)
         if self.action == "list":
             permission_classes = [IsAdminUser]
-        elif (
-            self.action == "retrieve"
-            or self.action == "favs"
-            or self.action == "update"
-            or self.action == "put"
-        ):
+        elif self.action == "favs" or self.action == "update" or self.action == "put":
             permission_classes = [IsSelf]
         else:
+            # self.action == "retrieve"
             # self.action == "create" or self.action == "login"
             permission_classes = [AllowAny]
 
