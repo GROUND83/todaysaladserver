@@ -3,6 +3,11 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+
+def trigger_error(request):
+    division_by_zero = 1 / 0
+
+
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/v1/users/", include("users.urls")),
@@ -16,6 +21,7 @@ urlpatterns = [
     path("api/v1/easyfood/", include("easyfoods.urls")),
     path("api/v1/postcode/", include("postcodes.urls")),
     path("api/v1/destinations/", include("destinations.urls")),
+    path("sentry-debug/", trigger_error),
 ]
 
 
