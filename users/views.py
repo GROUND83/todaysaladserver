@@ -62,7 +62,7 @@ class UsersViewSet(ModelViewSet):
         email = request.data.get("email")
         user = UserBackend.authenticate(self, request, email=email)
         if user is not None:
-            print("로그인")
+            # print("로그인")
             print(user)
             encoded_jwt = jwt.encode(
                 {"pk": user.pk}, settings.SECRET_KEY, algorithm="HS256"
@@ -70,7 +70,7 @@ class UsersViewSet(ModelViewSet):
             login(request, user, backend="users.my_auth.UserBackend")
             return Response({"token": encoded_jwt, "id": user.pk,})
         else:
-            print("오류")
+            # print("오류")
             return Response(
                 data={"로그인 과정 중에 오류가 있습니다."}, status=status.HTTP_401_UNAUTHORIZED
             )
