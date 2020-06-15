@@ -133,7 +133,7 @@ REST_FRAMEWORK = {
 
 DEFAULTPASSWORD = os.environ.get("DJANGO_SECRET_KEY")
 
-if DEBUG is False:
+if DEBUG:
     REST_FRAMEWORK["DEFAULT_RENDERER_CLASSES"] = [
         "rest_framework.renderers.JSONRenderer",
     ]
