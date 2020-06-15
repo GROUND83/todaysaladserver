@@ -25,7 +25,7 @@ SECRET_KEY = "qoyzahsqkkt2o#)4^m6h5d7!o%x)b_#yu6=_#r-)9__)mcd(9^"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["todaysaladserver.eba-tpxtuxsy.ap-northeast-2.elasticbeanstalk.com"]
 
 
 # Application definition
