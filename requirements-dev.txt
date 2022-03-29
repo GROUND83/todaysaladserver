@@ -32,7 +32,7 @@ idna==2.7
 importlib-metadata==1.6.1 ; python_version < '3.8'
 jmespath==0.10.0
 jsonschema==3.2.0
-paramiko==2.7.1
+paramiko==2.10.1
 pathspec==0.5.9
 pycparser==2.20
 pynacl==1.4.0
